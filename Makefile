@@ -20,6 +20,9 @@ else
 	@echo [info] using ${PMA_DIST_DIR} folder
 endif
 
+push: # Push images to Docker Hub
+	@docker push --all-tags noctuary/phpmyadmin
+
 clean: # Remove build folders
 	@echo [info] removing build folders
 	@rm -rf ${PMA_DIST_DIR} ${PMA_TINY_DIR}

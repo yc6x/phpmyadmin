@@ -1,5 +1,7 @@
 ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/noctuary/phpmyadmin/latest?style=plastic)    ![Image size](https://img.shields.io/docker/image-size/noctuary/phpmyadmin/latest?style=plastic)    ![Docker Pulls](https://img.shields.io/docker/pulls/noctuary/phpmyadmin?style=plastic)
 
+Docker Hub: [noctuary/phpmyadmin](https://hub.docker.com/repository/docker/noctuary/phpmyadmin)
+
 ## A tiny phpMyAdmin standalone image
 
 The compressed image size is 11 MB.  
