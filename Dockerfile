@@ -1,4 +1,4 @@
-FROM alpine:3.13 as phpsrv
+FROM alpine:3.12 as phpsrv
 
 LABEL maintainer="Yann Courtaux <ycourtaux@gmail.com>"
 
