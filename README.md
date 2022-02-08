@@ -4,8 +4,8 @@ Docker Hub: [noctuary/phpmyadmin](https://hub.docker.com/repository/docker/noctu
 
 ## A tiny phpMyAdmin standalone image
 
-The compressed image size is 10 MB.  
-Once pulled, it will take 34 MB of disk space. 
+The compressed image size is 13 MB.  
+Once pulled, it will take 37 MB of disk space. 
 
 It is 15 times smaller than the [Docker Official phpmyadmin images](https://hub.docker.com/_/phpmyadmin) (standalone: including Apache web server).  
 

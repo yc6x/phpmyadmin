@@ -1,4 +1,4 @@
-PMA_VERSION = 5.1.1
+PMA_VERSION = 5.1.2
 PMA_URL = https://files.phpmyadmin.net/phpMyAdmin/${PMA_VERSION}/phpMyAdmin-${PMA_VERSION}-english.tar.xz
 
 PMA_DIST_DIR = build/dist
