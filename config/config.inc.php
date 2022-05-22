@@ -1,6 +1,6 @@
 <?php
 
-require('/etc/phpmyadmin/config.secret.inc.php');
+require(__DIR__ . '/config.secret.inc.php');
 
 /* Ensure we got the environment */
 $vars = array(

@@ -15,9 +15,6 @@ rm -rf $DEST_DIR
 mkdir -p $DEST_DIR
 cp -a $SOURCE_DIR/. $DEST_DIR/
 
-# Update configuration directory to use /etc/phpmyadmin
-sed -i "s@define('CONFIG_DIR'.*@define('CONFIG_DIR', '/etc/phpmyadmin/');@" $DEST_DIR/libraries/vendor_config.php
-
 # Generate secret
 randomSecret=$(openssl rand -base64 32)
 sed "s@secretToChange@$randomSecret@" config/config.secret.tpl > config/config.secret.inc.php
@@ -29,6 +26,7 @@ FoldersToRemove=(
     "setup"
     "js/src"
     # additionnal themes
+    "themes/bootstrap"
     "themes/metro"
     "themes/original"
     # TCPDF lib (export shema as PDF feature)

@@ -22,5 +22,5 @@ CMD /usr/bin/php \
 
 FROM phpsrv
 
-COPY config/*.inc.php /etc/phpmyadmin/
 COPY build/pma/ .
+COPY config/*.inc.php ./
