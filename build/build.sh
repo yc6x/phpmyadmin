@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# No direct run: use 'make build'
+
 # docker repository
 REPO_NAME=noctuary/phpmyadmin
 
@@ -30,7 +32,7 @@ FoldersToRemove=(
     "themes/metro"
     "themes/original"
     # TCPDF lib (export shema as PDF feature)
-    "vendor/tecnickcom"
+    # "vendor/tecnickcom"
     # GIS visualisation
     "js/vendor/openlayers"
 )
@@ -43,15 +45,21 @@ FilesToRemove=(
     "composer.*"
     "installed.json"
     "yarn.lock"
+    "CHANGELOG.*"
     "changelog.*"
     "changelog"
-    "readme"
+    "README.*"
     "readme.*"
+    "readme"
 )
 for delFile in ${FilesToRemove[@]}; do
     find $DEST_DIR -type f -iname $delFile -delete
 done
 find $DEST_DIR -type f -name '*.md' -delete
+
+# Add info block
+
+sed -i '273r build/InfoBlock.html' $DEST_DIR/templates/home/index.twig
 
 echo "[info] size: `du -sh $DEST_DIR`"
 
