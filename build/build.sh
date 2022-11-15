@@ -59,7 +59,7 @@ find $DEST_DIR -type f -name '*.md' -delete
 
 # Add info block
 
-sed -i '273r build/InfoBlock.html' $DEST_DIR/templates/home/index.twig
+sed -i '' '273r build/InfoBlock.html' $DEST_DIR/templates/home/index.twig
 
 echo "[info] size: `du -sh $DEST_DIR`"
 

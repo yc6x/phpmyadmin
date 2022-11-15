@@ -26,3 +26,7 @@ push: # Push images to Docker Hub
 clean: # Remove build folders
 	@echo [info] removing build folders
 	@rm -rf ${PMA_DIST_DIR} ${PMA_TINY_DIR}
+
+buildx: # Build and push multi platform image
+	@$(MAKE) get
+	@docker buildx build --platform linux/amd64,linux/arm64 --push -t noctuary/phpmyadmin:${PMA_VERSION} -t noctuary/phpmyadmin:latest .
