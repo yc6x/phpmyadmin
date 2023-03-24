@@ -22,5 +22,5 @@ CMD /usr/bin/php \
 
 FROM phpsrv
 
-COPY build/pma/ .
+COPY build/tiny/ .
 COPY config/*.inc.php ./

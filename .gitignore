@@ -3,6 +3,6 @@
 .DS_Store
 
 /build/dist/
-/build/pma/
+/build/tiny/
 
 /config/config.secret.inc.php

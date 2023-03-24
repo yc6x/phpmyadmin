@@ -31,8 +31,6 @@ FoldersToRemove=(
     "themes/bootstrap"
     "themes/metro"
     "themes/original"
-    # TCPDF lib (export shema as PDF feature)
-    # "vendor/tecnickcom"
     # GIS visualisation
     "js/vendor/openlayers"
 )

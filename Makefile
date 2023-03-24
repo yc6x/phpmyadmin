@@ -1,8 +1,8 @@
-PMA_VERSION = 5.2.0
+PMA_VERSION = 5.2.1
 PMA_URL = https://files.phpmyadmin.net/phpMyAdmin/${PMA_VERSION}/phpMyAdmin-${PMA_VERSION}-english.tar.xz
 
 PMA_DIST_DIR = build/dist
-PMA_TINY_DIR = build/pma
+PMA_TINY_DIR = build/tiny
 
 .PHONY: build
 build: # Get phpMyAdmin, shrink the application and build the docker image
@@ -29,4 +29,5 @@ clean: # Remove build folders
 
 buildx: # Build and push multi platform image
 	@$(MAKE) get
-	@docker buildx build --platform linux/amd64,linux/arm64 --push -t noctuary/phpmyadmin:${PMA_VERSION} -t noctuary/phpmyadmin:latest .
+	@docker buildx build --platform linux/amd64,linux/arm64,linux/386,linux/arm/v7 --push \
+	-t noctuary/phpmyadmin:${PMA_VERSION} -t noctuary/phpmyadmin:latest .
